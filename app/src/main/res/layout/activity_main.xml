@@ -1,52 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+
     >
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/topLine"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1"
-        android:background="#6495ed">
+        android:layout_height="wrap_content"
+        android:background="#4169e1">
 
-        <TextView
+        <Button
+            android:id="@+id/btnGuess"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Red"
+            android:layout_height="wrap_content"
+            android:text="Guess Now"
+            android:layout_alignParentRight="true"/>
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnGuess"
+            android:layout_toLeftOf="@id/btnGuess"
+            android:layout_alignTop="@id/btnGuess"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#ff6347"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Green"
+            android:text="B1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#66cdaa"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Blue"
+            android:text="B2"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#6495ed"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Orange"
-            android:layout_weight="1"
-            android:background="#ff8c00"/>
+            android:text="B3"/>
 
     </LinearLayout>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/showText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:background="#3cb371">
+        android:layout_above="@id/bottomLine"
+        android:layout_below="@id/topLine"
+        android:textColor="#f00"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"/>
 
-    </LinearLayout>
-
-
-</LinearLayout>
+</RelativeLayout>
