@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private void  doGuess() {
         String strInput = input.getText().toString();
         String result = checkAB(answer,strInput);
-        showText.append( strInput + ":" + result);
+        showText.append( strInput + ":" + result + "\n");
         input.setText("");
     }
 
